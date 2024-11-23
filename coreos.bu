@@ -1,0 +1,14 @@
+variant: fcos
+version: 1.5.0
+passwd:
+  users:
+    - name: core
+      # You will probably want to replace my public key with your own public key
+      ssh_authorized_keys:
+        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFVJHRH2xg2joG1xJIrNTalRkzT6BM8rQT+OXoFiKn16 lars@oddbit.com
+storage:
+  files:
+    - path: /etc/containers/systemd/whoami.container
+      mode: 0644
+      contents:
+        local: whoami.container

@@ -1,0 +1,14 @@
+[Unit]
+Description=whoami
+After=network-online.target local-fs.target
+
+[Container]
+Image=docker.io/traefik/whoami:latest
+Pull=missing
+PublishPort=2040:2040
+Environment=WHOAMI_PORT_NUMBER=2040
+
+[Install]
+WantedBy=default.target
+
+
